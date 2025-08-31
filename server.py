@@ -31,7 +31,15 @@ CORS(app)  # Allow requests from your frontend
 
 # (Optional but Recommended) Map model's output IDs to human-readable labels
 # You need to adjust these labels based on what your model was trained to predict.
-id2label = {0: 'NEGATIVE', 1: 'POSITIVE'} # Example for sentiment analysis
+# Map output IDs to your emotion labels
+id2label = {
+    0: "sadness",
+    1: "joy",
+    2: "love",
+    3: "anger",
+    4: "fear",
+    5: "surprise"
+}
 
 @app.route("/")
 def home():
